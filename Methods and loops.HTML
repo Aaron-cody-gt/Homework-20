@@ -1,0 +1,43 @@
+<h2>Methods and Loops</h2>
+<p>Numbers from 1 to 10</p>
+<p id="numbers"></p>
+<p id="random"></p>
+<p id="day"></p>
+
+<script>
+   var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                var text = "";
+                var i;
+                for (i = 0; i < numbers.length; i++) {
+                    text += numbers[i] + "<br>";
+                }
+                document.getElementById("numbers").innerHTML = text;
+
+    var random = Math.floor(Math.random() * 100);
+    document.getElementById("random").innerHTML = "The random number is " + random;
+
+    var day;
+    switch (new Date().getDay()) {
+                case 0:
+                    day = "Sunday";
+                    break;
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case 6:
+                    day = "Saturday";
+            }
+            document.getElementById("day").innerHTML = "Today is " + day;            
+</script>
